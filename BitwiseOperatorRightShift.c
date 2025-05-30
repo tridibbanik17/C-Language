@@ -3,7 +3,7 @@
   i >> pos = i times 2 to the power of pos
 */
 int main() {
-  int i = 7; // 10000
+  int i = 16; // 10000
   int pos = 2; // pos = 2
   /*
     10000 >> 2 = 100
