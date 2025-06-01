@@ -52,7 +52,13 @@ int main() {
 
     printf("char c = %c\n", c);
     printf("char (as int) = %d\n", c);
-    printf("Address of c = %p\n", (void*)&c);
+    /*
+      (void *) is a form of pointer casting in C.
+      (void *) is a generic pointer and can point to any data type.
+      &c is the address of variable c (type: char *).
+      (void *)&c casts &c address to a void * — a generic pointer type.
+    */
+    printf("Address of c = %p\n", (void *)&c);
 
     printf("string = %s\n", "Hello, C!");
 
