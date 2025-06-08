@@ -8,6 +8,17 @@ bool isPrime(int num) {
         if (num % i == 0)
             return false;
     }
+
+    /*
+    // While loop Approach
+    int temp = num / 2;
+    while (temp > 1) {
+        if (num % temp == 0) {
+        return false;
+        }
+        temp--;
+    }
+    */
     return true;
 }
 
