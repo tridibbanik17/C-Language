@@ -11,6 +11,12 @@ int factorial(int n) {
   for (int i = 1; i <= n; i++) {
     fact = fact*i;
   }
+  /*
+  while (n > 0) {
+    fact = fact * n;
+    n--;
+  }
+  */
   return fact;
 }
 int main() {
@@ -18,4 +24,5 @@ int main() {
   printf("Enter a positive integer: ");
   scanf("%d", &n);
   printf("The factorial of %d is %d.\n", n, factorial(n));
+  return 0;
 }
