@@ -1,31 +1,35 @@
 #include <stdio.h>
 
 void search(int a[], int n, int key) {
-  int i, pos, flag = 0;
-  for (i = 0; i < n; i++) {
-    if (a[i] == key) {
-      flag = 1;
-      pos = i;
-      break;
+    int i, pos = -1;
+    for (i = 0; i < n; i++) {
+        if (a[i] == key) {
+            pos = i;
+            break;
+        }
     }
-  }
-  if (flag == 0) {
-    printf("Element is not found");
-  } else {
-    printf("Element is found at position: %d\n", pos);
-  }
+    if (pos == -1) {
+        printf("Element not found.\n");
+    } else {
+        printf("Element found at position: %d\n", pos);
+    }
 }
 
 int main() {
-  int a[10], i, n, key;
-  printf("Enter array size: \n");
-  scanf("%d", &n);
-  printf("Enter %d elements: \n", n);
-  for (i = 0; i < n; i++) {
-    scanf("%d", &a[i]);
-    printf("Enter element to be searched: \n");
+    int a[100], i, n, key;
+
+    printf("Enter array size: ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    printf("Enter element to be searched: ");
     scanf("%d", &key);
+
     search(a, n, key);
-  }
-  return 0;
+
+    return 0;
 }
